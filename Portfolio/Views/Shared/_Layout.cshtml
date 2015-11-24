@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Stephanie Gandy</title>
+    
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" /> 
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <style>
+       h1{
+           font-family: 'Satisfy', cursive;
+       }
+       p{
+           font-size:medium;
+       }
+     img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+   
+
+</head>
+<body>
+  <div class="navbar navbar-fixed-top"/>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Stephanie Gandy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("About Me", "AboutMe", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Projects", "Projects", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Connect", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    
+    
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year | Stephanie Gandy</p>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>
